@@ -12,54 +12,53 @@ The "ai-personal-assistant" project is an innovative solution that combines Azur
 ### Prerequisites
 
 - Azure Python Function app.
-- Azure OPENAI account 
+- Azure OpenAI account
 - Azure Cosmos DB for MongoDB
 - Python 3.9 or higher.
 
-
 ### Installation
 
-1) Clone the repository:
+1. Clone the repository:
 
-``` bash
-git clone [repository-url]
-```
+    ``` bash
+    git clone [repository-url]
+    ```
 
-2) Navigate to the project directory:
+1. Navigate to the project directory:
 
-```bash
-cd ai-personal-assistant
-```
+    ```bash
+    cd functions_with_openai
+    ```
 
-3) Install the required dependencies:
+1. Install the required dependencies:
 
-``` bash
-pip install -r requirements.txt
-```
+    ``` bash
+    pip install -r requirements.txt
+    ```
 
-4) Add the following environment variables in local.settings.json
-or as app settings in azure
-
+1. Add the following environment variables in local.settings.json
+or as app settings in Azure Function App
     - OPENAI_API_KEY
     - OPENAI_API_TYPE
     - OPENAI_API_BASE
     - OPENAI_API_VERSION
     - CosmosConnectionString
 
-
-
 ### Deployment
-To run the function app locally 
+
+To run the function app locally
 Run the following command
+
 ```bash
 func host start
 ```
+
 To deploy the FunctionApp to Azure:
 
 Ensure you are logged into Azure CLI.
 Run the following command:
 
-``` bash 
+``` bash
 func azure functionapp publish [Your FunctionApp Name]
 ``````
 
@@ -69,5 +68,3 @@ func azure functionapp publish [Your FunctionApp Name]
 - [Azure OpenAI Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/)
 - [Azure Functions Documentation](https://docs.microsoft.com/en-us/azure/azure-functions/)
 - [Azure Cosmos DB for MongoDB](https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/introduction)
-
-

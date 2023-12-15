@@ -19,3 +19,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
                 "Please pass a question in the request body",
                 status_code=400
             )
+    else:
+        return func.HttpResponse(
+            "Please pass a question in the request body",
+            status_code=200
+        )

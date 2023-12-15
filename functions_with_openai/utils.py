@@ -51,7 +51,7 @@ def create_embeddings(text):
 
     text = text.replace("\n", " ")
     embeddings = openai.Embedding.create(
-        input=[text], deployment_id="text-embedding-ada-002"
+        input=[text], deployment_id=os.environ.get("OPENAI_DEPLOYMENT_NAME")
     )["data"][0]["embedding"]
     return embeddings
 

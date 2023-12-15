@@ -11,7 +11,7 @@ email_app = Blueprint()
 
 
 @email_app.timer_trigger(schedule="0 */30 * * * *", arg_name="mytimer",
-                         run_on_startup=True,
+                         run_on_startup=False,
                          use_monitor=False)
 def upload_mails_to_cosmos(mytimer: TimerRequest):
     pythoncom.CoInitialize()

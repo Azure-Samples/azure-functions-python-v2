@@ -4,7 +4,7 @@
 
 azure-functions
 pywin32
-openai
+openai==0.28
 openai[datalib]
 numpy
 azure-cosmos

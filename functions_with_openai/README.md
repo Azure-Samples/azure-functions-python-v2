@@ -1,7 +1,19 @@
 
+---
+page_type: sample
+languages: 
+- python
+products: 
+- azure
+- azure-sdks
+- azure-functions
+description: "Azure Function App integrating OpenAI libraries, designed to automate tasks and offer AI-driven solutions"
+urlFragment: ai-personal-assistant
+---
+
 # ai-personal-assistant
 
-ai-personal-assistant is an Azure FunctionApp integrating OpenAI libraries, designed to automate tasks and offer AI-driven solutions. This project harnesses the power of AI to streamline processes and enhance functionality in various applications.
+ai-personal-assistant is an Azure Function App integrating OpenAI libraries, designed to automate tasks and offer AI-driven solutions. This project harnesses the power of AI to streamline processes and enhance functionality in various applications.
 
 ## Documentation
 
@@ -13,8 +25,9 @@ The "ai-personal-assistant" project is an innovative solution that combines Azur
 
 - Azure Python Function app.
 - Azure OpenAI account
-- Azure Cosmos DB for MongoDB
+- Azure Cosmos DB for MongoDB - vCore Config
 - Python 3.9 or higher.
+- (For local development) Azure Storage emulator such as [Azurite](https://learn.microsoft.com/azure/storage/common/storage-use-azurite) running in the background
 
 ### Installation
 
@@ -38,11 +51,14 @@ The "ai-personal-assistant" project is an innovative solution that combines Azur
 
 1. Add the following environment variables in local.settings.json
 or as app settings in Azure Function App
-    - OPENAI_API_KEY
-    - OPENAI_API_TYPE
-    - OPENAI_API_BASE
-    - OPENAI_API_VERSION
-    - CosmosConnectionString
+    - OPENAI_API_KEY -  The API key for your Azure OpenAI resource; For Open AI refer [platform API Key](https://platform.openai.com/api-keys).
+    - OPENAI_API_TYPE - set this to `azure` for azure API
+    - OPENAI_API_BASE - The base URL for your Azure OpenAI resource.  You can find this in the Azure portal under your Azure OpenAI resource for Azure Open AI.
+    - OPENAI_API_VERSION - The API version you want to use: set this to `2022-12-01` for the released version. Refer [this doc](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference#embeddings) for latest released version for embeddings.
+    - OPENAI_DEPLOYMENT_NAME - set this to deployment name for Azure Open AI and model name (`text-embedding-ada-002`) for Open AI API.
+    - CosmosConnectionString - Connection String of Cosmos Database for Mongo DB (vCore)
+    - DB_NAME - Database Name in Mongo DB
+    - COLLECTION_NAME - Collection Name in the Mongo DB.
 
 ### Deployment
 

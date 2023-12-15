@@ -5,9 +5,12 @@
         "FUNCTIONS_WORKER_RUNTIME": "python",
         "AzureWebJobsFeatureFlags": "EnableWorkerIndexing",
         "OPENAI_API_KEY": "",
-        "OPENAI_API_TYPE": "",
-        "OPENAI_API_BASE": "",
-        "OPENAI_API_VERSION": "",
-        "CosmosConnectionString": ""
+        "OPENAI_API_TYPE": "azure",
+        "OPENAI_API_BASE": "https://<your-resource>.openai.azure.com/",
+        "OPENAI_API_VERSION": "2022-12-01",
+        "OPENAI_DEPLOYMENT_NAME": "",
+        "CosmosConnectionString": "",
+        "DB_NAME": "",
+        "COLLECTION_NAME": ""
     }
 }

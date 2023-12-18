@@ -7,10 +7,12 @@ products:
 - azure-sdks
 - azure-functions
 description: "Azure Function App integrating OpenAI libraries, designed to automate tasks and offer AI-driven solutions"
-urlFragment: ai-personal-assistant
+title: Using Azure Open AI for automations with Azure Functions
+author: gavin-aguiar
+urlFragment: azure-functions-python-use-open-ai
 ---
 
-# ai-personal-assistant
+# Using Azure Open AI for automations with Azure Functions
 
 ai-personal-assistant is an Azure Function App integrating OpenAI libraries, designed to automate tasks and offer AI-driven solutions. This project harnesses the power of AI to streamline processes and enhance functionality in various applications.
 
@@ -26,6 +28,7 @@ The "ai-personal-assistant" project is an innovative solution that combines Azur
 - Azure OpenAI account
 - Azure Cosmos DB for MongoDB - vCore Config
 - Python 3.9 or higher.
+- Outlook Desktop App
 - (For local development) Azure Storage emulator such as [Azurite](https://learn.microsoft.com/azure/storage/common/storage-use-azurite) running in the background
 
 ### Installation
